@@ -1,0 +1,124 @@
+header h1 {
+    font-family: "Kenia";
+    font-display: swap;
+}
+body {
+    font-family: "Roboto Slab";
+    background: linear-gradient(135deg, rgb(0, 183, 255), rgb(0, 255, 55));
+    min-height: 100vh;
+}
+
+img {
+    animation: roll 0.5s linear;
+    animation-iteration-count: 1;
+}
+
+.dice-2 {
+    animation-delay: 200ms;
+}
+
+.dice-3 {
+    animation-delay: 300ms;
+}
+
+.dice-4 {
+    animation-delay: 400ms;
+}
+
+.dice-5 {
+    animation-delay: 500ms;
+}
+
+.dice-6 {
+    animation-delay: 600ms;
+}
+
+@keyframes roll {
+    0% {
+        /* opacity: 0; */
+        transform: rotate(360deg);
+    }
+    100% {
+        /* opacity: 100; */
+        transform: rotate(0);
+    }
+}
+
+/* SNACKBAR CSS FROM w3schools */
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #333; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+    visibility: visible; /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+btn:disabled {
+    transition: 0.3s;
+    background: #bdbdbd;
+    color: black;
+    padding: 0;
+}
